@@ -1,11 +1,13 @@
-<h1>Kodiak Island Trails</h1>
-<p><%= link_to 'New Trail', new_trail_path %></p>
+<h1 class="right-align bottom">Kodiak Island Trails</h1>
+<p><%= link_to 'Add', new_trail_path, {class: "btn-floating btn-large waves-effect waves-light red"} %></p>
 
 <% @trails.each do |trail| %>
-  <h2><%= trail.title %></h2>
+<div class="trail">
+  <h3><%= trail.title %></h3>
   <h5>Mileage: <%= trail.mileage %></h5>
-  <%= link_to 'Show Trail', trail_path(trail) %>
-  <%= link_to 'Edit Trail', edit_trail_path(trail) %>
-  <%= link_to 'Delete Trail', trail, method: :delete %>
+  <%= link_to 'Show Trail', trail_path(trail), {class: "button"} %>
+  <%= link_to 'Edit Trail', edit_trail_path(trail), {class: "button"} %>
+  <%= link_to 'Delete Trail', trail, {method: :delete, class: "button"} %>
+</div>
 <% end %>
 

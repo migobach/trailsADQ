@@ -1,4 +1,4 @@
-<h1>Edit Trail</h1>
+<h1 class="right-align bottom">Edit Trail</h1>
 <%= form_for @trail do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
@@ -9,5 +9,5 @@
   <%= f.label :description %>
   <%= f.text_area :description %>
 
-  <%= f.submit %>
+  <%= f.submit class: "waves-effect light-green darken-4 btn" %>
 <% end %>

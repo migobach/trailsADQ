@@ -1,5 +1,5 @@
-<h1><%= @trail.title %></h1>
-<h3><%= @trail.mileage %></h3>
-<p><%= @trail.description %></p>
+<h1 class="right-align bottom"><%= @trail.title %></h1>
+<h3>Mileage: <%= @trail.mileage %></h3>
+<p>Description: <%= @trail.description %></p>
 
-<%= link_to 'Back', trails_path %>
+<%= link_to 'Back', trails_path, {class: "waves-effect light-green darken-4 btn"} %>
